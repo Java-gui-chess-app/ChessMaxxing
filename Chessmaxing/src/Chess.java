@@ -6,9 +6,10 @@ public class Chess {
             int mainMenuOption = JOptionPane.showOptionDialog(null, "welcome to Chess", "Chessmaxxing", 0, 3, null, options, options[0]);
             if(mainMenuOption == 0);
                 Character[][] board = {{'♜','♞','♝','♚','♛','♞','♝','♜'}, {'♟', '♟', '♟','♟','♟','♟','♟','♟',}, {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' }, {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' }, {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' }, {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' }, {'♙', '♙', '♙', '♙', '♙', '♙', '♙', '♙'}, {'♖', '♘', '♗', '♕', '♔', '♗', '♘', '♖' }};
+                int turnNumber = 1;
                 String boardDisplay = PrintBoard.main(board);
                 String move = JOptionPane.showInputDialog(null, boardDisplay, "board", 1);
-                board = Engine.main(move, board);
+                board = Engine.main(move, board, turnNumber);
         };
     }
 }
