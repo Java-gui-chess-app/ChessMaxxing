@@ -15,7 +15,7 @@ public class Engine extends Chess {
         {board = Knight.main(move2, board);};
         else if(board[Integer.parseInt(move2[0]) - 1][Integer.parseInt(move2[1])-1] == '♙' || board[Integer.parseInt(move2[0]) - 1][Integer.parseInt(move2[1])-1] == '♟')
         {board = Pawn.main(move2, board);};
-        else {JOptionPane.showMessageDialog(null, move2, move, 0); };
+        else {JOptionPane.showMessageDialog(null, "the peice you attempted to move is not a valid peice", "Oops!", 0); };
 
         return board;
         }
