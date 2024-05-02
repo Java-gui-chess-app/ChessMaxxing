@@ -1,3 +1,4 @@
+import javax.swing.JOptionPane;
 public class Engine extends Chess {
     public static Character[][] main(String move, Character[][] board) {
         {
@@ -14,6 +15,7 @@ public class Engine extends Chess {
         {board = Knight.main(move2, board);};
         else if(board[Integer.parseInt(move2[0]) - 1][Integer.parseInt(move2[1])-1] == '♙' || board[Integer.parseInt(move2[0]) - 1][Integer.parseInt(move2[1])-1] == '♟')
         {board = Pawn.main(move2, board);};
+        else {JOptionPane.showMessageDialog(null, move2, move, 0); };
 
         return board;
         }
