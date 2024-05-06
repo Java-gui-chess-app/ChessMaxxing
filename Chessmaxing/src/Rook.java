@@ -43,8 +43,8 @@ public class Rook extends Chess {
         //changes board based on move
         board[move2[0]][move2[1]] = ' ';
         if (isWhite = true)
-            board[move2[2]][move2[3]] = '♜';
-        else board[move2[2]][move2[3]] = '♖';
+            board[move2[2]][move2[3]] = '♖';
+        else board[move2[2]][move2[3]] = '♜';
         return board;
         }
     }
