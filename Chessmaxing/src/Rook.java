@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 public class Rook extends Chess {
-    public static Character[][] main(int[] move2, Character[][] board, Boolean isWhite) {
+    public static Character[][] main(int[] move2, Character[][] board, boolean isWhite) {
         {
         //checks for direction of move (0=right,1=down,2=left,3=up)
         int direction = 0;
@@ -42,9 +42,8 @@ public class Rook extends Chess {
         
         //changes board based on move
         board[move2[0]][move2[1]] = ' ';
-        if (isWhite = true)
-            board[move2[2]][move2[3]] = '♜';
-        else board[move2[2]][move2[3]] = '♖';
+        if (isWhite == true) board[move2[2]][move2[3]] = '♖';
+        else board[move2[2]][move2[3]] = '♜';
         return board;
         }
     }
