@@ -15,9 +15,9 @@ public class Engine extends Chess {
         else if(board[move2[0]][move2[1]] == '♕' || board[move2[0]][move2[1]] == '♛')
         {board = Queen.main(move2, board);}
         else */if(board[(move2[0])][(move2[1])] == '♖' || board[(move2[0])][(move2[1])] == '♜')
-        {board = Rook.main(move2, board, isWhite);}/*
+        {board = Rook.main(move2, board, isWhite);}
         else if(board[move2[0]][move2[1]] == '♗' || board[move2[0]][move2[1]] == '♝')
-        {board = Bishop.main(move2, board);}*/
+        {board = Bishop.main(move2, board, isWhite);}
         else if(board[move2[0]][move2[1]] == '♘' || board[move2[0]][move2[1]] == '♞')
         {board = Knight.main(move2, board, isWhite);}
         else if(board[(move2[0])][(move2[1])] == '♙' || board[(move2[0])][(move2[1])] == '♟')

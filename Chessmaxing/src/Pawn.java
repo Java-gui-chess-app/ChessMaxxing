@@ -8,13 +8,13 @@ public class Pawn extends Chess {
         if (isWhite == true){
             if ((move2[0] - move2[2] == 1 && move2[1] == move2[3]) && board[move2[2]][move2[3]] == ' ');
             else if (((move2[0]-move2[2] == 2 && move2[0] == 6) && move2[1] == move2[3]) && (board[move2[2]+1][move2[3]] == ' ' && board[move2[2]][move2[3]] == ' '));
-            else if ((move2[0] - move2[2] == 1 && Math.abs(move2[1] - move2[3]) == 1) && (board[move2[2]][move2[3]] == '♖' || board[move2[2]][move2[3]] == '♘' || board[move2[2]][move2[3]] == '♗' || board[move2[2]][move2[3]] == '♔' || board[move2[2]][move2[3]] == '♕' || board[move2[2]][move2[3]] == '♙'));
+            else if ((move2[0] - move2[2] == 1 && Math.abs(move2[1] - move2[3]) == 1) && (board[move2[2]][move2[3]] == '♜' || board[move2[2]][move2[3]] == '♞' || board[move2[2]][move2[3]] == '♝' || board[move2[2]][move2[3]] == '♚' || board[move2[2]][move2[3]] == '♛' || board[move2[2]][move2[3]] == '♟'));
             else {JOptionPane.showMessageDialog(null, "That peice can not move to that square", "Oops!", 0); return board;};
             }
         else {
             if ((move2[0] - move2[2] == -1 && move2[1] == move2[3]) && board[move2[2]][move2[3]] == ' ');
             else if (((move2[0]-move2[2] == -2 && move2[0] == 1) && move2[1] == move2[3]) && (board[move2[2]-1][move2[3]] == ' ' && board[move2[2]][move2[3]] == ' '));
-            else if ((move2[0] - move2[2] == -1 && Math.abs(move2[1] - move2[3]) == 1) && board[move2[2]][move2[3]] == '♜' || board[move2[2]][move2[3]] == '♞' || board[move2[2]][move2[3]] == '♝' || board[move2[2]][move2[3]] == '♚' || board[move2[2]][move2[3]] == '♛' || board[move2[2]][move2[3]] == '♟');
+            else if ((move2[0] - move2[2] == -1 && Math.abs(move2[1] - move2[3]) == 1) && board[move2[2]][move2[3]] == '♖' || board[move2[2]][move2[3]] == '♘' || board[move2[2]][move2[3]] == '♗' || board[move2[2]][move2[3]] == '♔' || board[move2[2]][move2[3]] == '♕' || board[move2[2]][move2[3]] == '♙');
             else {JOptionPane.showMessageDialog(null, "That peice can not move to that square", "Oops!", 0); return board;};
             };
         //checks if landing square is valid
