@@ -12,9 +12,9 @@ public class Engine extends Chess {
         //checks the peice being moved and calls on that peice's function or method or whatever
         /*if(board[move2[0]][move2[1]] == '♔' || board[move2[0]][move2[1]] == '♚')
         {board = King.main(move2, board);}
-        else if(board[move2[0]][move2[1]] == '♕' || board[move2[0]][move2[1]] == '♛')
-        {board = Queen.main(move2, board);}
-        else */if(board[(move2[0])][(move2[1])] == '♖' || board[(move2[0])][(move2[1])] == '♜')
+        else*/ if(board[move2[0]][move2[1]] == '♕' || board[move2[0]][move2[1]] == '♛')
+        {board = Queen.main(move2, board, isWhite);}
+        else if(board[(move2[0])][(move2[1])] == '♖' || board[(move2[0])][(move2[1])] == '♜')
         {board = Rook.main(move2, board, isWhite);}
         else if(board[move2[0]][move2[1]] == '♗' || board[move2[0]][move2[1]] == '♝')
         {board = Bishop.main(move2, board, isWhite);}
