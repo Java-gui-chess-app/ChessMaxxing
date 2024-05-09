@@ -10,12 +10,12 @@ public class Engine extends Chess {
         if (turnNumber % 2 == 0) isWhite = true;
         else isWhite = false;
         //checks the peice being moved and calls on that peice's function or method or whatever
-        /*if(board[move2[0]][move2[1]] == '♔' || board[move2[0]][move2[1]] == '♚')
-        {board = King.main(move2, board);}
+        if(board[move2[0]][move2[1]] == '♔' || board[move2[0]][move2[1]] == '♚')
+        {board = Piece.King(move2, board, isWhite);}
         else if(board[move2[0]][move2[1]] == '♕' || board[move2[0]][move2[1]] == '♛')
-        {board = Queen.main(move2, board);}
-        else */if(board[(move2[0])][(move2[1])] == '♖' || board[(move2[0])][(move2[1])] == '♜')
-        {board = Rook.main(move2, board, isWhite);}
+        {board = Piece.Queen(move2, board, isWhite);}
+        else if(board[(move2[0])][(move2[1])] == '♖' || board[(move2[0])][(move2[1])] == '♜')
+        {board = Piece.Rook(move2, board, isWhite);}
         else if(board[move2[0]][move2[1]] == '♗' || board[move2[0]][move2[1]] == '♝')
         {board = Piece.Bishop(move2, board, isWhite);}
         else if(board[move2[0]][move2[1]] == '♘' || board[move2[0]][move2[1]] == '♞')
