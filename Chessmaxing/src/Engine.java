@@ -10,19 +10,34 @@ public class Engine extends Chess {
         if (turnNumber % 2 == 0) isWhite = true;
         else isWhite = false;
         //checks the peice being moved and calls on that peice's function or method or whatever
-        if(board[move2[0]][move2[1]] == '♔' || board[move2[0]][move2[1]] == '♚')
-        {board = Piece.King(move2, board, isWhite);}
-        else if(board[move2[0]][move2[1]] == '♕' || board[move2[0]][move2[1]] == '♛')
-        {board = Piece.Queen(move2, board, isWhite);}
-        else if(board[(move2[0])][(move2[1])] == '♖' || board[(move2[0])][(move2[1])] == '♜')
-        {board = Piece.Rook(move2, board, isWhite);}
-        else if(board[move2[0]][move2[1]] == '♗' || board[move2[0]][move2[1]] == '♝')
-        {board = Piece.Bishop(move2, board, isWhite);}
-        else if(board[move2[0]][move2[1]] == '♘' || board[move2[0]][move2[1]] == '♞')
-        {board = Piece.Knight(move2, board, isWhite);}
-        else if(board[(move2[0])][(move2[1])] == '♙' || board[(move2[0])][(move2[1])] == '♟')
-        {board = Piece.Pawn(move2, board, isWhite);}
-        else {JOptionPane.showMessageDialog(null, "the peice you attempted to move is not a valid peice", "Oops!", 0); };
+        switch(board[move2[0]][move2[1]]){
+            case '♔':
+            case '♚':
+                board = Piece.King(move2, board, isWhite);
+                break;
+            case '♕':
+            case '♛':
+                board = Piece.Queen(move2, board, isWhite);
+                break;
+            case '♖':
+            case '♜':
+                board = Piece.Rook(move2, board, isWhite);
+                break;
+            case '♗':
+            case '♝':
+                board = Piece.Bishop(move2, board, isWhite);
+                break;
+            case '♘':
+            case '♞':
+                board = Piece.Knight(move2, board, isWhite);
+                break;
+            case '♙':
+            case '♟':
+                board = Piece.Pawn(move2, board, isWhite);
+                break;
+            default:
+            JOptionPane.showMessageDialog(null, "the peice you attempted to move is not a valid peice", "Oops!", 0);
+        }
         return board;
         }
     }
