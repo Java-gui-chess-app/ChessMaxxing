@@ -11,10 +11,10 @@ public class Engine extends Chess {
         else isWhite = false;
         //checks the peice being moved and calls on that peice's function or method or whatever
         switch(board[move2[0]][move2[1]]){
-            case '♔':
+            /*case '♔':
             case '♚':
                 board = Piece.King(move2, board, isWhite);
-                break;
+                break;*/
             case '♕':
             case '♛':
                 board = Piece.Queen(move2, board, isWhite);
