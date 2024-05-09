@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 
 public class Piece {
 
-    public Character[][] Pawn(int[] move2, Character[][] board, boolean isWhite) {
+    public static Character[][] Pawn(int[] move2, Character[][] board, boolean isWhite) {
     {
     //checks if peice being moved is correct colour
     if (((isWhite == false && board[move2[0]][move2[1]] == '♟') || (isWhite == true && board[move2[0]][move2[1]] == '♙')) == false) {JOptionPane.showMessageDialog(null, "That is not your peice.", "Oops!", 0); return board;};
@@ -33,7 +33,7 @@ public class Piece {
     }
     }
 
-    public Character[][] Knight(int[] move2, Character[][] board, boolean isWhite) {
+    public static Character[][] Knight(int[] move2, Character[][] board, boolean isWhite) {
         {
         //checks if peice being moved is correct colour
         if ((isWhite == false && board[move2[0]][move2[1]] == '♞' || isWhite == true && board[move2[0]][move2[1]] == '♘' ) == false) {JOptionPane.showMessageDialog(null, "That is not your peice.", "Oops!", 0); return board;}
@@ -54,7 +54,7 @@ public class Piece {
         }
     }
 
-    public Character[][] Rook(int[] move2, Character[][] board, boolean isWhite) {
+    public static Character[][] Rook(int[] move2, Character[][] board, boolean isWhite) {
         {
         //checks for direction of move (0=right,1=down,2=left,3=up)
         int direction = 0;
@@ -102,7 +102,7 @@ public class Piece {
         }
     }
 
-    public Character[][] Bishop(int[] move2, Character[][] board, boolean isWhite) {
+    public static Character[][] Bishop(int[] move2, Character[][] board, boolean isWhite) {
         {
         //assigns variable for the direction the bishop is moving(0 = up right, 1 = down right, 2 = down left, 3 = up left)
         int direction;
